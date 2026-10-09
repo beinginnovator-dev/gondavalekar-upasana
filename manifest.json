@@ -1,0 +1,55 @@
+{
+  "name": "Gondavalekar Maharaj Upasana",
+  "short_name": "Gondavale Upasana",
+  "description": "Spiritual companion for Shri Brahmachaitanya Gondavalekar Maharaj Upasana — daily schedule, teachings, naam japa reminders in English, Hindi & Marathi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#8B4513",
+  "theme_color": "#8B4513",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": [
+    "lifestyle",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Daily Schedule",
+      "short_name": "Schedule",
+      "url": "/#schedule",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Reminders",
+      "short_name": "Reminders",
+      "url": "/#reminders",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "scope": "/"
+}

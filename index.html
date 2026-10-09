@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#8B4513" />
+  <meta name="description" content="Gondavalekar Maharaj Upasana - Daily schedule, teachings, naam japa and reminders for Shri Brahmachaitanya Gondavalekar Maharaj worship." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Gondavale Upasana" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>Gondavalekar Maharaj Upasana</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Splash / Loading -->
+  <div id="splash" class="splash">
+    <div class="splash-content">
+      <div class="om-symbol">ॐ</div>
+      <h1>श्री ब्रह्मचैतन्य गोंदवलेकर महाराज</h1>
+      <p>Upasana App</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-inner">
+      <button id="menuBtn" class="icon-btn" aria-label="Menu">☰</button>
+      <h1 class="app-title" data-i18n="appTitle">Gondavale Upasana</h1>
+      <div class="header-actions">
+        <select id="langSelect" class="lang-select" aria-label="Language">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Side Navigation -->
+  <nav id="sideNav" class="side-nav">
+    <div class="nav-header">
+      <span class="nav-om">ॐ</span>
+      <button id="closeNav" class="icon-btn">✕</button>
+    </div>
+    <ul class="nav-list">
+      <li><a href="#home" class="nav-link active" data-page="home" data-i18n="navHome">Home</a></li>
+      <li><a href="#about" class="nav-link" data-page="about" data-i18n="navAbout">About Maharaj</a></li>
+      <li><a href="#upasana" class="nav-link" data-page="upasana" data-i18n="navUpasana">Upasana Details</a></li>
+      <li><a href="#schedule" class="nav-link" data-page="schedule" data-i18n="navSchedule">Daily Schedule</a></li>
+      <li><a href="#teachings" class="nav-link" data-page="teachings" data-i18n="navTeachings">Teachings</a></li>
+      <li><a href="#reminders" class="nav-link" data-page="reminders" data-i18n="navReminders">Reminders</a></li>
+      <li><a href="#share" class="nav-link" data-page="share" data-i18n="navShare">Share</a></li>
+    </ul>
+    <div class="nav-footer">
+      <p data-i18n="navFooter">श्री राम जय राम जय जय राम</p>
+    </div>
+  </nav>
+  <div id="navOverlay" class="nav-overlay"></div>
+
+  <!-- Main Content -->
+  <main id="mainContent" class="main-content">
+
+    <!-- HOME PAGE -->
+    <section id="page-home" class="page active">
+      <div class="hero">
+        <div class="hero-om">ॐ</div>
+        <h2 data-i18n="homeWelcome">Shri Brahmachaitanya Gondavalekar Maharaj</h2>
+        <p class="hero-mantra">श्री राम जय राम जय जय राम</p>
+        <p class="hero-sub" data-i18n="homeSub">Path of Naam Japa • Bhakti • Upasana</p>
+      </div>
+
+      <div class="card-grid">
+        <a href="#about" class="feature-card" data-page="about">
+          <div class="card-icon">🙏</div>
+          <h3 data-i18n="cardAbout">About Maharaj</h3>
+          <p data-i18n="cardAboutDesc">Life & spiritual journey</p>
+        </a>
+        <a href="#upasana" class="feature-card" data-page="upasana">
+          <div class="card-icon">🪔</div>
+          <h3 data-i18n="cardUpasana">Upasana</h3>
+          <p data-i18n="cardUpasanaDesc">Meaning of worship</p>
+        </a>
+        <a href="#schedule" class="feature-card" data-page="schedule">
+          <div class="card-icon">📅</div>
+          <h3 data-i18n="cardSchedule">Daily Schedule</h3>
+          <p data-i18n="cardScheduleDesc">Temple timings</p>
+        </a>
+        <a href="#reminders" class="feature-card" data-page="reminders">
+          <div class="card-icon">🔔</div>
+          <h3 data-i18n="cardReminders">Reminders</h3>
+          <p data-i18n="cardRemindersDesc">Set daily alerts</p>
+        </a>
+      </div>
+
+      <div class="quote-box">
+        <p class="quote-text" data-i18n="homeQuote">"Naam alone is the ultimate truth. Keep chanting the divine name while performing worldly duties."</p>
+        <p class="quote-author">— Shri Gondavalekar Maharaj</p>
+      </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="page-about" class="page">
+      <h2 class="page-title" data-i18n="aboutTitle">About Shri Gondavalekar Maharaj</h2>
+      
+      <div class="info-card">
+        <h3 data-i18n="aboutBirth">Birth & Early Life</h3>
+        <p data-i18n="aboutBirthText">Shri Brahmachaitanya Gondavalekar Maharaj was born on 19 February 1845 (Magha Shuddha Dwadashi) at Gondavale Budruk, Satara district, Maharashtra. His birth name was Ganpati (Ganu) Raoji Ghugardare. Born into a Deshastha Brahmin family devoted to Lord Vitthala, he showed deep spiritual inclination from childhood.</p>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="aboutGuru">Guru & Initiation</h3>
+        <p data-i18n="aboutGuruText">At a young age he left home in search of a Guru. He met Shri Tukamai (Tukaram Chaitanya) at Yehalegaon near Nanded. After nine months of intense service and tests, on Ram Navami he was initiated with the Trayodashakshari mantra "Shri Ram Jai Ram Jai Jai Ram" and given the spiritual name Brahmachaitanya.</p>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="aboutLife">Householder Saint</h3>
+        <p data-i18n="aboutLifeText">Following his Guru's guidance, he lived as a householder while continuously practicing and teaching Naam Japa. He built many Rama temples across Maharashtra, Karnataka and beyond. He emphasized that true devotion does not require renouncing the world — one can attain God while fulfilling family duties with constant remembrance of Rama.</p>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="aboutSamadhi">Samadhi</h3>
+        <p data-i18n="aboutSamadhiText">Shri Maharaj took Samadhi on 22 December 1913 (Margashirsha Vadya Dashami) at Gondavale. His Samadhi Mandir continues to be a major centre of Ram Naam Japa, Annadan and Upasana. Every year the Punyatithi Mahotsav is celebrated with great devotion.</p>
+      </div>
+
+      <div class="mantra-box">
+        <p class="mantra-label" data-i18n="mantraLabel">The Divine Mantra</p>
+        <p class="mantra-text">श्री राम जय राम जय जय राम</p>
+        <p class="mantra-translit">Shri Ram Jai Ram Jai Jai Ram</p>
+      </div>
+    </section>
+
+    <!-- UPASANA PAGE -->
+    <section id="page-upasana" class="page">
+      <h2 class="page-title" data-i18n="upasanaTitle">Upasana Details</h2>
+      
+      <div class="info-card">
+        <h3 data-i18n="upasanaMeaning">What is Upasana?</h3>
+        <p data-i18n="upasanaMeaningText">Upasana means "sitting near" or worship with deep devotion. In the tradition of Gondavalekar Maharaj, Upasana centres on three pillars:</p>
+        <ul class="pillar-list">
+          <li data-i18n="pillar1"><strong>Naam Smaran</strong> — Continuous chanting of Ram Naam</li>
+          <li data-i18n="pillar2"><strong>Sagunopasana</strong> — Worship of the divine form (idol/samadhi)</li>
+          <li data-i18n="pillar3"><strong>Annadan</strong> — Feeding all without discrimination</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="upasanaEssence">Essence of Worship</h3>
+        <p data-i18n="upasanaEssenceText">Maharaj taught that the Japam of the Divine Name means awareness of the Divine presence and surrender of one's ego to His Will. Every year a resolution (sankalp) is made to complete 13 crore Ram Naam Japam. Devotees contribute from home and at Gondavale.</p>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="upasanaPractice">Daily Practice for Devotees</h3>
+        <ul class="practice-list">
+          <li data-i18n="practice1">Chant "Shri Ram Jai Ram Jai Jai Ram" as much as possible throughout the day</li>
+          <li data-i18n="practice2">Perform morning and evening remembrance of Maharaj / Rama</li>
+          <li data-i18n="practice3">Maintain purity in thought, word and deed</li>
+          <li data-i18n="practice4">Serve others selflessly (especially Annadan when possible)</li>
+          <li data-i18n="practice5">Attend satsang and read Maharaj's pravachane / bodhavachane</li>
+          <li data-i18n="practice6">Keep the mind on Rama even while doing worldly work</li>
+        </ul>
+      </div>
+
+      <div class="info-card highlight">
+        <h3 data-i18n="upasanaKey">Key Teaching</h3>
+        <p data-i18n="upasanaKeyText">"Mukhī Bhagavantāche Nām | Hātī Prapanchāche Kām | Aisā Jodā Manī Rām"</p>
+        <p class="trans" data-i18n="upasanaKeyTrans">(Divine Name on the lips, worldly duties in the hands, and Rama in the mind)</p>
+      </div>
+    </section>
+
+    <!-- SCHEDULE PAGE -->
+    <section id="page-schedule" class="page">
+      <h2 class="page-title" data-i18n="scheduleTitle">Daily Schedule at Gondavale</h2>
+      <p class="page-sub" data-i18n="scheduleSub">Samadhi Mandir, Gondavale Budruk (approximate timings)</p>
+
+      <div class="schedule-list" id="scheduleList">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="share-schedule-box">
+        <button id="shareScheduleWhatsApp" class="btn btn-whatsapp">
+          <span>📲</span> <span data-i18n="shareWhatsApp">Share Schedule on WhatsApp</span>
+        </button>
+        <button id="addAllToCalendar" class="btn btn-calendar">
+          <span>📅</span> <span data-i18n="addToCalendar">Add All to Google Calendar</span>
+        </button>
+      </div>
+
+      <div class="info-card note">
+        <p data-i18n="scheduleNote">Note: Timings may vary slightly on special occasions (Punyatithi, Gurupournima, Ram Navami, etc.). Always confirm locally when visiting.</p>
+      </div>
+    </section>
+
+    <!-- TEACHINGS PAGE -->
+    <section id="page-teachings" class="page">
+      <h2 class="page-title" data-i18n="teachingsTitle">Core Teachings (Subodh)</h2>
+      
+      <div class="teachings-list" id="teachingsList">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <!-- REMINDERS PAGE -->
+    <section id="page-reminders" class="page">
+      <h2 class="page-title" data-i18n="remindersTitle">Reminders & Alerts</h2>
+      
+      <div class="info-card">
+        <h3 data-i18n="reminderApp">App Notifications</h3>
+        <p data-i18n="reminderAppText">Enable browser notifications to receive daily reminders for Naam Japa and important aarti times. Works best when the app is installed as PWA.</p>
+        <button id="enableNotifications" class="btn btn-primary">
+          <span data-i18n="enableNotif">Enable Notifications</span>
+        </button>
+        <p id="notifStatus" class="status-text"></p>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="reminderSelect">Select Daily Reminders</h3>
+        <div class="reminder-options" id="reminderOptions">
+          <!-- Filled by JS -->
+        </div>
+        <button id="saveReminders" class="btn btn-primary" style="margin-top:1rem;">
+          <span data-i18n="saveReminders">Save Reminders</span>
+        </button>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="reminderGoogle">Google Calendar</h3>
+        <p data-i18n="reminderGoogleText">Add individual events or the full daily schedule to your Google Calendar for reliable reminders across devices.</p>
+        <div class="calendar-buttons" id="calendarButtons">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SHARE PAGE -->
+    <section id="page-share" class="page">
+      <h2 class="page-title" data-i18n="shareTitle">Share Upasana</h2>
+      
+      <div class="info-card">
+        <h3 data-i18n="shareScheduleTitle">Share Daily Schedule</h3>
+        <p data-i18n="shareScheduleText">Share the complete daily programme of Gondavale Samadhi Mandir with family and friends.</p>
+        <button id="shareFullWhatsApp" class="btn btn-whatsapp">
+          <span>📲</span> <span data-i18n="shareWhatsApp">Share on WhatsApp</span>
+        </button>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="shareMantraTitle">Share the Mantra</h3>
+        <p class="share-mantra">श्री राम जय राम जय जय राम</p>
+        <button id="shareMantraWhatsApp" class="btn btn-whatsapp">
+          <span>📲</span> <span data-i18n="shareMantraBtn">Share Mantra</span>
+        </button>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="shareAppTitle">Share this App</h3>
+        <p data-i18n="shareAppText">Invite others to install this spiritual companion app.</p>
+        <button id="shareAppBtn" class="btn btn-primary">
+          <span data-i18n="shareAppBtn">Share App Link</span>
+        </button>
+      </div>
+
+      <div class="info-card">
+        <h3 data-i18n="installTitle">Install App</h3>
+        <p data-i18n="installText">Install this PWA on your home screen for quick access and better notification support.</p>
+        <button id="installBtn" class="btn btn-secondary" style="display:none;">
+          <span data-i18n="installBtn">Install App</span>
+        </button>
+        <p id="installHint" class="status-text" data-i18n="installHint">On mobile: Browser menu → Add to Home Screen</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation (mobile) -->
+  <nav class="bottom-nav">
+    <a href="#home" class="bottom-link active" data-page="home">
+      <span class="b-icon">🏠</span>
+      <span data-i18n="navHome">Home</span>
+    </a>
+    <a href="#schedule" class="bottom-link" data-page="schedule">
+      <span class="b-icon">📅</span>
+      <span data-i18n="navSchedule">Schedule</span>
+    </a>
+    <a href="#reminders" class="bottom-link" data-page="reminders">
+      <span class="b-icon">🔔</span>
+      <span data-i18n="navReminders">Reminders</span>
+    </a>
+    <a href="#upasana" class="bottom-link" data-page="upasana">
+      <span class="b-icon">🪔</span>
+      <span data-i18n="navUpasana">Upasana</span>
+    </a>
+  </nav>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
